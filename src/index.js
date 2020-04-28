@@ -96,7 +96,7 @@ const Footer = ({
             currentFilter={visibilityFilter}
             onClick={onFilterClick}
         >
-            All
+            All,
         </FilterLink>
         {' '}
         <FilterLink
@@ -104,7 +104,7 @@ const Footer = ({
             currentFilter={visibilityFilter}
             onClick={onFilterClick}
         >
-            Active
+            Active,
         </FilterLink>
         {' '}
         <FilterLink
