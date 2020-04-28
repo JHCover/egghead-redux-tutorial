@@ -63,13 +63,12 @@ const visibilityFilter = (
 
 const todoApp = combineReducers({
     todos,
-    visibilityFilter,
-    onClick
+    visibilityFilter
 });
 
 const store = createStore(todoApp);
 
-const FilterLink = ({filter, children, currentFilter}) => {
+const FilterLink = ({filter, children, currentFilter, onClick}) => {
     if (filter === currentFilter) {
         return <span>{children}</span>
     }
