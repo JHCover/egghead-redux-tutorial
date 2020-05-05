@@ -1,37 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
-import { toggleTodo } from "../actionCreators/todoActions";
-
-const Todo = ({
-                  onClick,
-                  completed,
-                  text
-              }) => (
-    <li
-        onClick={onClick}
-        style={{
-            textDecoration:
-                completed ?
-                    'line-through' :
-                    'none'
-        }}>
-        {text}
-    </li>
-);
-
-const TodoList = ({
-                      todos,
-                      onTodoClick
-                  }) => (
-    <ul>
-        {todos.map(todo =>
-            <Todo
-                key={todo.id}
-                {...todo}
-                onClick={() => onTodoClick(todo.id)}
-            />)}
-    </ul>
-)
+import { toggleTodo } from "../actions";
+import TodoList from './TodoList';
 
 const getVisibleTodos = (
     todos,

@@ -1,22 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux';
-import { setVisibilityFilter } from "../actionCreators/todoActions";
-
-const Link = ({active, children, onClick}) => {
-    if (active) {
-        return <span>{children}</span>
-    }
-    return (
-        <a href='#'
-           onClick={e => {
-               e.preventDefault();
-               onClick();
-           }}
-        >
-            {children}
-        </a>
-    );
-};
+import { setVisibilityFilter } from "../actions";
+import Link from './Link';
 
 const mapStateToProps = (state, ownProps) => ({
     active: ownProps.filter ===
